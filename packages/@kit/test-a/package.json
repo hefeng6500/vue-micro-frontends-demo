@@ -1,0 +1,14 @@
+{
+  "name": "@kit/test-a",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.20"
+  },
+  "author": "hefeng6500 2443992009@qq.com",
+  "license": "ISC"
+}
