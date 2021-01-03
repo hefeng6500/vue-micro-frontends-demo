@@ -1,0 +1,18 @@
+{
+  "name": "@kit/app-module-loader",
+  "version": "0.1.0",
+  "description": "load modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hefeng6500",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.20"
+  }
+}

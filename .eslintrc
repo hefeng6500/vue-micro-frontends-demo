@@ -1,9 +1,24 @@
 {
-  "parser": "babel-eslint",
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "parser": "babel-eslint",
+    "sourceType": "module",
+    "ecmafeatures": {
+      //允许在全局作用域下使用return语句
+      "globalReturn": false,
+      //启用全局strict模式（严格模式）
+      "impliedStrict": false,
+      //启用JSX
+      "jsx": false,
+      //启用对实验性的objectRest/spreadProperties的支持
+      "experimentalObjectRestSpread": false
+    }
+  },
   "extends": [
-    "plugin:json/recommended",
     "airbnb-base",
-    "plugin:vue/recommended"
+    "plugin:vue/recommended",
+    "plugin:json/recommended"
   ],
   "env": {
     "browser": true,
