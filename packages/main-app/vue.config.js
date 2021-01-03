@@ -1,14 +1,17 @@
 const path = require("path");
+
 function resolve(dir) {
   return path.join(__dirname, dir);
 }
+
 module.exports = {
   chainWebpack: config => {
-    console.log("test", resolve("../@kit/test-a"));
     config.resolve.alias.set("@", resolve("src"));
+    config.resolve.alias.set("@kit/test-a", resolve("../@kit/test-a/index.js"));
     config.resolve.alias.set(
-      "@kit/test-a",
-      resolve("../@kit/test-a/src/index.js")
+      "@kit/app-module-loader",
+      resolve("../@kit/app-module-loader/index.js")
     );
+    config.resolve.alias.set("@kit/page", resolve("../@kit/page/index.js"));
   }
 };

@@ -1,16 +1,10 @@
 <template>
   <div id="app">
-    <router-link to="/foo">foo</router-link><br />
-    <router-link to="/bar">bar</router-link><br />
     <router-link to="/page-constructor/page-list">first page-list</router-link
     ><br />
     <router-link to="/page-constructor/page-details"
       >first page-details</router-link
     ><br />
-
-    <router-link to="/user-management/role">second role</router-link><br />
-    <router-link to="/user-management/user">first user</router-link><br />
-
     <router-view></router-view>
   </div>
 </template>
