@@ -11,12 +11,24 @@
 
 <script>
 import test from "@kit/test-a";
+import axios from "axios";
 
 export default {
   name: "App",
   components: {},
   mounted() {
     test();
+
+    axios
+      .get("/api/json", {
+        params: {}
+      })
+      .then(res => {
+        console.log(res);
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 };
 </script>
