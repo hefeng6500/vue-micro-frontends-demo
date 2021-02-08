@@ -3,7 +3,12 @@ function joinPath(path, prefix) {
 }
 
 function combinePath(prefix, moduleList) {
-  const moduleListMap = moduleList.forEach((item) => joinPath(item.path, prefix));
+  const moduleListMap = moduleList.map((item) => {
+    const cacheItem = item;
+    cacheItem.path = joinPath(item.path, prefix);
+    return cacheItem;
+  });
+
   return moduleListMap;
 }
 
@@ -19,5 +24,6 @@ export default function loadModules({
   if (prefix) {
     combinePath(prefix, moduleList);
   }
+
   router.addRoutes(moduleList);
 }
