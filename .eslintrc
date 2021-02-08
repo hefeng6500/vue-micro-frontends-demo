@@ -31,7 +31,7 @@
     "no-debugger": 0,
     "no-console": 0,
     "comma-dangle": ["error", "never"],
-    "linebreak-style": ["error", "unix"],
+    "linebreak-style": 0,
     "quotes": ["error", "double"],
     "vue/no-unused-vars": "error"
   }

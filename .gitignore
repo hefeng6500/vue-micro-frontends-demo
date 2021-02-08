@@ -9,8 +9,9 @@
 
 */*/node_modules
 
+
 # production
-/dist
+dist
 /docs-dist
 
 # misc
