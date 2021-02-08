@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <router-link to="/page-constructor/page-list">first page-list</router-link
+    <router-link to="/modules/page-constructor/page-list"
+      >first page-list</router-link
     ><br />
-    <router-link to="/page-constructor/page-details"
+    <router-link to="/modules/page-constructor/page-details"
       >first page-details</router-link
     ><br />
     <router-view></router-view>
