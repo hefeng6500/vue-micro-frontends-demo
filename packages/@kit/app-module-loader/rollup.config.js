@@ -1,19 +1,16 @@
-import resolve from "rollup-plugin-node-resolve";
-import commonjs from "rollup-plugin-commonjs";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import { babel, getBabelOutputPlugin } from "@rollup/plugin-babel";
 
 export default {
-  input: "src/main.js",
+  input: "index.js",
   output: {
-    file: "bundle.js",
-    format: "cjs"
+    file: "dist/app-module-loader.js",
+    format: "esm",
+    name: "appModuleLoader",
+    sourcemap: true,
+    plugins: [getBabelOutputPlugin({ presets: ["@babel/preset-env"] })]
   },
-  plugins: [
-    resolve({
-      customResolveOptions: {
-        moduleDirectory: "node_modules"
-      }
-    }),
-    commonjs()
-  ],
-  external: ["lodash"]
+  plugins: [commonjs(), babel({ babelHelpers: "bundled" }), nodeResolve()],
+  external: []
 };
